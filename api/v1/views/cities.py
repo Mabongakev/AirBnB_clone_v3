@@ -16,7 +16,7 @@ def get_cities(state_id):
     if state_obj is None:
         abort(404)
     for obj in state_obj.cities:
-        city_list.append(obj.to_json())
+        city_list.append(obj.to_dict())
 
     return jsonify(city_list)
 
